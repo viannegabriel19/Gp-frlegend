@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="GP F1 — l'actu, les calendriers et les résultats de la Formule 1, en français.">
+  <title>GP F1 — La course, en français</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topline"><span>LE MONDE DE LA FORMULE 1</span><span class="topline-right"><span class="live-dot"></span> PASSIONNÉMENT COURSE</span></div>
+  <header class="header">
+    <a class="brand" href="#accueil" aria-label="GP F1, accueil"><span class="brand-mark">GP</span><span class="brand-name">F1<span class="brand-period">.</span></span></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="active" href="#accueil">Accueil</a><a href="#calendrier">Calendrier</a><a href="#classements">Classements</a><a href="#actu">Actualités</a>
+    </nav>
+    <a class="header-cta" href="#calendrier">Prochain GP <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-image" aria-hidden="true"><div class="track-line track-one"></div><div class="track-line track-two"></div><div class="hero-glow"></div></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> LA FORMULE 1, AUTREMENT</p>
+        <h1>LA COURSE<br>NE S'ARRÊTE <span>JAMAIS.</span></h1>
+        <p class="hero-copy">Toute l'intensité de la F1. Les dernières infos, les résultats et le calendrier — au même endroit, en français.</p>
+        <a class="button button-red" href="#actu">Plonger dans l'actu <span>→</span></a>
+      </div>
+      <div class="hero-meta"><span>VITESSE. STRATÉGIE. ÉMOTION.</span><span>01 — 24</span></div>
+      <div class="hero-side-label">GP F1&nbsp; / &nbsp;SAISON 2026</div>
+    </section>
+
+    <section class="next-race section-wrap" aria-label="Prochain Grand Prix">
+      <div class="race-label"><span class="live-dot"></span> PROCHAIN RENDEZ-VOUS</div>
+      <div class="race-main"><div class="race-date"><strong>06</strong><span> DÉC</span></div><div class="race-info"><span class="race-round">ROUND 24 · FINALE DE SAISON</span><h2>GRAND PRIX D'ABOU DHABI</h2><p>Yas Marina Circuit <span class="muted">·</span> 58 tours <span class="muted">·</span> 5,281 km</p></div></div>
+      <div class="countdown"><div><strong id="days">--</strong><span>JOURS</span></div><i>:</i><div><strong id="hours">--</strong><span>HEURES</span></div><i>:</i><div><strong id="minutes">--</strong><span>MIN</span></div></div>
+      <a class="arrow-link" href="#calendrier" aria-label="Voir le calendrier">↗</a>
+    </section>
+
+    <section class="section-wrap schedule" id="calendrier">
+      <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> À VOS AGENDAS</p><h2>LE CALENDRIER<span>.</span></h2></div><a class="text-link" href="#calendrier">SAISON 2026 <span>↗</span></a></div>
+      <div class="schedule-grid">
+        <article class="gp-card gp-card-featured"><div class="card-top"><span>ROUND 24</span><span class="flag">🇦🇪</span></div><div class="circuit circuit-uae" aria-hidden="true"></div><div class="gp-card-bottom"><div><span class="gp-date">04 — 06 DÉC.</span><h3>ABOU DHABI</h3><span class="gp-country">Émirats arabes unis</span></div><span class="card-arrow">↗</span></div></article>
+        <article class="gp-card"><div class="card-top"><span>ROUND 23</span><span class="flag">🇶🇦</span></div><div class="circuit circuit-qatar" aria-hidden="true"></div><div class="gp-card-bottom"><div><span class="gp-date">27 — 29 NOV.</span><h3>QATAR</h3><span class="gp-country">Lusail International Circuit</span></div><span class="card-arrow">↗</span></div></article>
+        <article class="gp-card"><div class="card-top"><span>ROUND 22</span><span class="flag">🇺🇸</span></div><div class="circuit circuit-usa" aria-hidden="true"></div><div class="gp-card-bottom"><div><span class="gp-date">20 — 22 NOV.</span><h3>LAS VEGAS</h3><span class="gp-country">Las Vegas Strip Circuit</span></div><span class="card-arrow">↗</span></div></article>
+      </div>
+      <p class="data-note">Calendrier indicatif — les dates et horaires officiels sont à confirmer.</p>
+    </section>
+
+    <section class="standings-band" id="classements"><div class="section-wrap standings-inner"><div class="standings-title"><p class="eyebrow"><span class="eyebrow-line"></span> LA HIÉRARCHIE</p><h2>CLASSEMENTS<span>.</span></h2><p>La saison se joue à chaque virage.</p><div class="tabs" role="tablist"><button class="tab active" role="tab" aria-selected="true" data-table="pilotes">PILOTES</button><button class="tab" role="tab" aria-selected="false" data-table="constructeurs">CONSTRUCTEURS</button></div></div>
+    <div class="standings-table-wrap"><table class="standings-table"><thead><tr><th>POS</th><th id="table-label">PILOTE</th><th>ÉQUIPE</th><th>PTS</th></tr></thead><tbody id="standings-body"></tbody></table><p class="data-note">Classements de démonstration — à actualiser avec les résultats officiels.</p></div></div></section>
+
+    <section class="section-wrap news" id="actu"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> DANS LE PADDOCK</p><h2>À LA UNE<span>.</span></h2></div><span class="text-link">L'ESPRIT GRAND PRIX</span></div><div class="news-grid">
+      <article class="news-card news-main"><div class="news-art art-speed"><span class="art-label">ANALYSE</span><span class="art-number">01</span><div class="art-stripe"></div><span class="art-word">FULL<br>THROTTLE</span></div><div class="news-copy"><span class="news-category">DÉCRYPTAGE <i>·</i> 6 MIN</span><h3>La stratégie : l'autre course qui se joue dans les stands</h3><a href="#calendrier" class="text-link">LIRE L'ARTICLE <span>↗</span></a></div></article>
+      <article class="news-card"><div class="news-art art-tech"><span class="art-label">TECHNIQUE</span><span class="tech-orbit orbit-a"></span><span class="tech-orbit orbit-b"></span><span class="tech-core">F1</span><span class="art-number">02</span></div><div class="news-copy"><span class="news-category">TECHNIQUE <i>·</i> 4 MIN</span><h3>Aéro, pneus, moteur : les clés de la performance</h3><a href="#classements" class="text-link">DÉCOUVRIR <span>↗</span></a></div></article>
+      <article class="news-card"><div class="news-art art-pit"><span class="art-label">COULISSES</span><div class="pit-lights"><i></i><i></i><i></i><i></i><i></i></div><span class="pit-word">PIT<br>LANE</span><span class="art-number">03</span></div><div class="news-copy"><span class="news-category">PADDOCK <i>·</i> 3 MIN</span><h3>Dans les coulisses d'un week-end de Grand Prix</h3><a href="#calendrier" class="text-link">ENTRER DANS LE PADDOCK <span>↗</span></a></div></article>
+    </div></section>
+
+    <section class="newsletter"><div class="section-wrap newsletter-inner"><div><p class="eyebrow"><span class="eyebrow-line"></span> LA F1 DANS VOTRE BOÎTE MAIL</p><h2>NE RATEZ<br><span>AUCUN DÉPART.</span></h2></div><form class="newsletter-form" id="newsletter-form"><label for="email">Le meilleur de GP F1, directement chez vous.</label><div class="input-row"><input id="email" type="email" placeholder="votre@email.com" required><button type="submit" aria-label="S'inscrire">→</button></div><p class="form-message" id="form-message">En vous inscrivant, vous acceptez de recevoir nos actualités.</p></form></div></section>
+  </main>
+  <footer class="footer"><a class="brand" href="#accueil"><span class="brand-mark">GP</span><span class="brand-name">F1<span class="brand-period">.</span></span></a><p>LA PASSION DE LA COURSE, EN FRANÇAIS.</p><span>© 2026 GP F1 · SITE FAN INDÉPENDANT, NON AFFILIÉ À LA FORMULE 1.</span></footer>
+</body>
+</html>
